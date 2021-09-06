@@ -1,0 +1,29 @@
+{
+  "name": "covid-notification",
+  "version": "1.0.0",
+  "description": "sending available covid vaccine center",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vs8871/covid-notification.git"
+  },
+  "keywords": [
+    "send",
+    "covid",
+    "notificaion"
+  ],
+  "author": "vishnu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vs8871/covid-notification/issues"
+  },
+  "homepage": "https://github.com/vs8871/covid-notification#readme",
+  "dependencies": {
+    "request": "^2.88.2",
+    "twilio": "^3.67.1",
+    "wbm": "^1.1.16"
+  }
+}
