@@ -4,7 +4,8 @@
   "description": "sending available covid vaccine center",
   "main": "index.js",
   "scripts": {
-    "test": "npm index.js"
+    "start": "node index.js",
+    "test": "echo \"Error: No test Specified\" && exit 1"
   },
   "repository": {
     "type": "git",
