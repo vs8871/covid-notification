@@ -3,6 +3,11 @@ const http = require('http');
 const port = process.env.PORT || 3000
 let messageBody;
 
+String.prototype.replaceAll = function (oldValue, newValue) {
+    const m = this.split(oldValue).join(newValue);
+    return m;
+}
+
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     var requestLoop = setInterval(function () {
