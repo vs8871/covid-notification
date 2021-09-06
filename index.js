@@ -11,7 +11,10 @@ String.prototype.replaceAll = function (oldValue, newValue) {
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     var requestLoop = setInterval(function () {
-        https.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=664&date=06-09-2021', (resp) => {
+        const todayDate = new Date().toJSON().slice(0, 10).split('-').reverse().join('-');
+        const url = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=664&date={date}';
+        const callingUrl = url.replace('{date}', todayDate);
+        https.get(callingUrl, (resp) => {
             let data = '';
 
             // A chunk of data has been received.
