@@ -10,6 +10,8 @@ String.prototype.replaceAll = function (oldValue, newValue) {
 
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
+    require('dotenv').config();
+
     var requestLoop = setInterval(function () {
         const todayDate = new Date().toJSON().slice(0, 10).split('-').reverse().join('-');
         const url = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=664&date={date}';
@@ -50,8 +52,8 @@ const server = http.createServer((req, res) => {
                         .replaceAll('{', '').replaceAll('}', '').replaceAll(':', '=').replaceAll(',', '\n')
                         .replaceAll('"', '');
                     if (messageBody?.length > 0) {
-                        const id = 'AC7c06bba28a4c3a6d9a019e96e1134d36';
-                        const token = 'bda89208a154cfc9ed7316ee260f9f6a';
+                        const id = process.env.ID;
+                        const token = process.env.TOKEN;
 
                         // Importing the Twilio module
                         const twilio = require('twilio');

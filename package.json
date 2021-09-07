@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/vs8871/covid-notification#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "request": "^2.88.2",
     "twilio": "^3.67.1",
     "wbm": "^1.1.16"
